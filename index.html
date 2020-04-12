@@ -10,8 +10,27 @@
     </head>
     <body>
         <div class="container-fluid">
-            <button class="btn btn-primary" id="player-one" value="rock" type="submit">Submit</button>
-            <button class="btn btn-primary" id="player-two" value="paper" type="submit">Submit</button>
+            <div>
+                <h1 class="message"></h1>
+            </div>
+            <div class="p1-area border container">
+                <div>
+                    <p>Player 1</p>
+                    <p class="p1-message"></p>
+                </div>
+                <button class="p1-btn btn btn-primary" id="p1-rock" value="rock" type="submit">Rock</button>
+                <button class="p1-btn btn btn-primary" id="p1-paper" value="paper" type="submit">Paper</button>
+                <button class="p1-btn btn btn-primary" id="p1-scissor" value="scissor" type="submit">Scissor</button>
+            </div>
+            <div class="p2-area border container">
+                <div>
+                    <p>Player 2</p>
+                    <p class="p2-message"></p>
+                </div>
+                <button class="p2-btn btn btn-primary" id="p2-rock" value="rock" type="submit">Rock</button>
+                <button class="p2-btn btn btn-primary" id="p2-paper" value="paper" type="submit">Paper</button>
+                <button class="p2-btn btn btn-primary" id="p2-scissor" value="scissor" type="submit">Scissor</button>
+            </div>
         </div>
     </body>
     <!-- Firebase References -->
