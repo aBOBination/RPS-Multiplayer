@@ -5,31 +5,45 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>RPS-Multiplayer</title>
         <!-- Style References -->
+        <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
         <link rel="stylesheet" href="assets/css/style.css" />
     </head>
     <body>
-        <div class="container-fluid">
-            <div>
-                <h1 class="message"></h1>
+        <div class="container-fluid mb-5 col-9">
+            <div class="text-center">
+                <img class="bg" src="assets/images/bg.png" alt="" />
             </div>
-            <div class="p1-area border container">
-                <div>
-                    <p>Player 1</p>
-                    <p class="p1-message"></p>
+            <div class="game-area d-flex justify-content-around bg-light m-5 p-5 mx-auto">
+                <div class="p-2">
+                    <div class="">
+                        <p class="p1-img text-center"></p>
+                    </div>
+                    <div class="pt-1 text-center">
+                        <button class="p1-btn btn btn-primary" id="p1-rock" value="rock" type="submit">Rock</button>
+                        <button class="p1-btn btn btn-primary" id="p1-paper" value="paper" type="submit">Paper</button>
+                        <button class="p1-btn btn btn-primary" id="p1-scissor" value="scissor" type="submit">Scissor</button>
+                        <p class="p1-name text-center mt-2">Player 1</p>
+                        <p class="p1-message"></p>
+                    </div>
                 </div>
-                <button class="p1-btn btn btn-primary" id="p1-rock" value="rock" type="submit">Rock</button>
-                <button class="p1-btn btn btn-primary" id="p1-paper" value="paper" type="submit">Paper</button>
-                <button class="p1-btn btn btn-primary" id="p1-scissor" value="scissor" type="submit">Scissor</button>
-            </div>
-            <div class="p2-area border container">
-                <div>
-                    <p>Player 2</p>
-                    <p class="p2-message"></p>
+                <div class="p-2 align-self-center mx-auto">
+                    <div>
+                        <p class="message text-center"></p>
+                    </div>
                 </div>
-                <button class="p2-btn btn btn-primary" id="p2-rock" value="rock" type="submit">Rock</button>
-                <button class="p2-btn btn btn-primary" id="p2-paper" value="paper" type="submit">Paper</button>
-                <button class="p2-btn btn btn-primary" id="p2-scissor" value="scissor" type="submit">Scissor</button>
+                <div class="p-2">
+                    <div class="">
+                        <p class="p2-img text-center"></p>
+                    </div>
+                    <div class="pt-1 text-center">
+                        <button class="p2-btn btn btn-primary" id="p2-rock" value="rock" type="submit">Rock</button>
+                        <button class="p2-btn btn btn-primary" id="p2-paper" value="paper" type="submit">Paper</button>
+                        <button class="p2-btn btn btn-primary" id="p2-scissor" value="scissor" type="submit">Scissor</button>
+                        <p class="p2-name text-center">Player 2</p>
+                        <p class="p2-message"></p>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

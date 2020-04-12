@@ -26,9 +26,9 @@ database.ref('/rpg').on(
         playerTwoMove = snapshot.val().playerTwoMove;
 
         if (playerOneMove && !playerTwoMove) {
-            $('.p1-message').text('Waiting for Player 2');
+            $('.p2-message').text('Your turn!');
         } else if (!playerOneMove && playerTwoMove) {
-            $('.p2-message').text('Waiting for Player 1');
+            $('.p1-message').text('Your turn!');
         } else {
             $('.p1-message').text('');
             $('.p2-message').text('');
@@ -36,17 +36,17 @@ database.ref('/rpg').on(
 
         if (playerOneMove && playerTwoMove) {
             if (playerOneMove === 'rock' && playerTwoMove === 'paper') {
-                $('.message').text('Paper beats Rock : Player 2 wins');
+                $('.message').html('Winner! &rArr;');
             } else if (playerOneMove === 'rock' && playerTwoMove === 'scissor') {
-                $('.message').text('Rock beats Scissor : Player 1 wins');
+                $('.message').html('&lArr; Winner!');
             } else if (playerOneMove === 'paper' && playerTwoMove === 'rock') {
-                $('.message').text('Paper beats Rock : Player 1 wins');
+                $('.message').html('&lArr; Winner!');
             } else if (playerOneMove === 'paper' && playerTwoMove === 'scissor') {
-                $('.message').text('Scissor beats Paper : Player 2 wins');
+                $('.message').html('Winner! &rArr;');
             } else if (playerOneMove === 'scissor' && playerTwoMove === 'rock') {
-                $('.message').text('Rock beats Scissor : Player 2 wins');
+                $('.message').html('Winner! &rArr;');
             } else if (playerOneMove === 'scissor' && playerTwoMove === 'paper') {
-                $('.message').text('Scissor beats Paper : Player 1 wins');
+                $('.message').html('&lArr; Winner!');
             } else {
                 $('.message').text('Tie, go again!');
             }
@@ -54,8 +54,10 @@ database.ref('/rpg').on(
                 playerOneMove: '',
                 playerTwoMove: '',
             });
-            player = '';
-            console.log(player);
+
+            setTimeout(function () {
+                location.reload();
+            }, 2000);
         }
     },
     function (errorObject) {
@@ -64,6 +66,8 @@ database.ref('/rpg').on(
 );
 
 $('.p1-btn').on('click', function (event) {
+    console.log(playerOneMove);
+    console.log(player);
     if (!playerOneMove && !player) {
         database
             .ref()
@@ -72,12 +76,12 @@ $('.p1-btn').on('click', function (event) {
                 playerOneMove: $(this).attr('value'),
             });
         player = 1;
-        console.log(playerOneMove);
-        // $('.p2-area').html('<p>Waiting for Player 2</p>');
     }
 });
 
 $('.p2-btn').on('click', function (event) {
+    console.log(playerTwoMove);
+    console.log(player);
     if (!playerTwoMove && !player) {
         database
             .ref()
@@ -86,7 +90,5 @@ $('.p2-btn').on('click', function (event) {
                 playerTwoMove: $(this).attr('value'),
             });
         player = 2;
-        console.log(playerTwoMove);
-        // $('.p1-area').html('<p>Waiting for Player 1</p>');
     }
 });

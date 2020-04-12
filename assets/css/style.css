@@ -1,0 +1,51 @@
+body {
+    font-family: 'Fredoka One', cursive;
+
+}
+
+.bg {
+    height: 200px;
+}
+
+.game-area {
+    max-width: 1200px;
+}
+.p1-img {
+    background-image: url("../images/fist-left.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: solid 2px black;
+    height: 225px;
+    width: 225px;
+}
+
+.p2-img {
+    background-image: url("../images/fist-right.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: solid 2px black;
+    height: 225px;
+    width: 225px;
+}
+
+.p1-btn {
+    background-color: rgb(25,171,160);
+    border: solid 2px black;
+}
+
+.p2-btn {
+    background-color: rgb(179,204,51);
+    border: solid 2px black;
+}
+
+.p1-btn:hover {
+    background-color: rgb(226,18,44);
+    border: solid 2px black;
+}
+
+.p2-btn:hover {
+    background-color: rgb(226,18,44);
+    border: solid 2px black;
+}
